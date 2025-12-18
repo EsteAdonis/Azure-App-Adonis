@@ -1,0 +1,46 @@
+@page
+@model azure_app_adonis.Pages.Engineers.Details
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h4>Details</h4>
+
+<div>
+	<h5>Engineer</h5>
+	<table class="table">
+		<thead>
+			<tr>
+				<td> 
+					@Html.DisplayNameFor(model => model.Engineer.Id)
+				</td>
+				<td>
+					@Html.DisplayNameFor(model => model.Engineer.Name)
+				</td>
+				<td>
+					@Html.DisplayNameFor(model => model.Engineer.Country)
+				</td>
+				<td>
+					@Html.DisplayNameFor(model => model.Engineer.Speciality)
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					@Html.DisplayFor(model => model.Engineer.Id)
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.Engineer.Name)
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.Engineer.Country)
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.Engineer.Speciality)
+				</td>
+			</tr>
+	</table>
+	<form>
+		<a asp-page="./Index" class="btn btn-secondary">Back to List</a>	
+	</form>
