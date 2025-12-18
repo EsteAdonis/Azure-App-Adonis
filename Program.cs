@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddApplicationInsightsTelemetry();
 // Add services to the container.
 builder.Services.AddScoped<IEngineerService, EngineerService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
